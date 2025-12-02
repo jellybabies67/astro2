@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigerian Spices Flashcards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Nigerian Spices & Seasonings</h1>
+            <p class="subtitle">Interactive Flashcards for Traditional Ingredients</p>
+        </header>
+
+        <div class="flashcard-container">
+            <div class="navigation">
+                <button class="btn btn--outline nav-btn" id="prevBtn" aria-label="Previous card">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6"></path>
+                    </svg>
+                    Previous
+                </button>
+                
+                <div class="card-counter">
+                    <span id="currentCard">1</span> of <span id="totalCards">12</span>
+                </div>
+                
+                <button class="btn btn--outline nav-btn" id="nextBtn" aria-label="Next card">
+                    Next
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="card-wrapper">
+                <div class="flashcard" id="flashcard">
+                    <div class="flashcard-inner">
+                        <!-- Front of card -->
+                        <div class="flashcard-front">
+                            <div class="flip-indicator">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.19 3 12.25c0 2.22 1.8 4.05 4 4.05z"></path>
+                                    <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2.04 4.6 4.14 5.93c2.1 1.33 3.78 3.17 4.69 5.27c.91 2.1.98 4.5.2 6.9c-.78 2.4-2.46 4.52-4.75 5.98c-2.29 1.46-5.01 2.17-7.63 2.01c0 0-.62 2.3-2.64 3.59c-3.4-14.7 6.29-21.6 11.31-19.12c-2.7-1.46-5.58-2.3-8.76-2.3z"></path>
+                                </svg>
+                                <span>Tap to flip</span>
+                            </div>
+                            <div class="spice-name" id="spiceName">Loading...</div>
+                            <div class="spice-subtitle" id="spiceSubtitle">Loading...</div>
+                        </div>
+
+                        <!-- Back of card -->
+                        <div class="flashcard-back">
+                            <div class="info-section">
+                                <div class="section-header">
+                                    <span class="section-icon">🌿</span>
+                                    <h3>Names</h3>
+                                </div>
+                                <div class="section-content">
+                                    <div class="name-item">
+                                        <strong>English:</strong> <span id="englishName">Loading...</span>
+                                    </div>
+                                    <div class="name-item">
+                                        <strong>Igbo:</strong> <span id="igboName">Loading...</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info-section">
+                                <div class="section-header">
+                                    <span class="section-icon">🍽️</span>
+                                    <h3>Primary Uses</h3>
+                                </div>
+                                <div class="section-content">
+                                    <ul id="primaryUses">
+                                        <li>Loading...</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="info-section">
+                                <div class="section-header">
+                                    <span class="section-icon">👅</span>
+                                    <h3>Flavor Profile</h3>
+                                </div>
+                                <div class="section-content">
+                                    <p id="flavorProfile">Loading...</p>
+                                </div>
+                            </div>
+
+                            <div class="info-section">
+                                <div class="section-header">
+                                    <span class="section-icon">🤝</span>
+                                    <h3>Best Pairings</h3>
+                                </div>
+                                <div class="section-content">
+                                    <div class="pairings-grid" id="bestPairings">
+                                        <span class="pairing-item">Loading...</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="info-section">
+                                <div class="section-header">
+                                    <span class="section-icon">💡</span>
+                                    <h3>Special Notes</h3>
+                                </div>
+                                <div class="section-content">
+                                    <p id="specialNotes">Loading...</p>
+                                </div>
+                            </div>
+
+                            <div class="info-section">
+                                <div class="section-header">
+                                    <span class="section-icon">🏥</span>
+                                    <h3>Health Benefits</h3>
+                                </div>
+                                <div class="section-content">
+                                    <div class="health-benefits">
+                                        <div class="benefit-item">
+                                            <strong>Nutritional:</strong> <span id="nutritionalBenefits">Loading...</span>
+                                        </div>
+                                        <div class="benefit-item">
+                                            <strong>Medicinal:</strong> <span id="medicinalProperties">Loading...</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-instructions">
+                <p>Click the card to flip • Use arrow keys to navigate • Spacebar to flip</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
